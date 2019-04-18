@@ -10,12 +10,10 @@ export default class Child extends React.Component {
     }
 
     componentWillMount() {
-        console.log(this)
         console.log('will mount')
     }
 
     componentDidMount() {
-        console.log(this)
         console.log('did mount')
     }
 
