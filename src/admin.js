@@ -5,21 +5,18 @@ import Footer from './components/Footer'
 import NavLeft from './components/NavLeft'
 import './style/common.less'
 
-import Home from './pages/home'
-
 export default class Admin extends React.Component {
 
     render() {
         return (
-            <Row className="container">
+            <Row type="flex" className="container">
                 <Col span={4} className="nav-left">
                     <NavLeft/>
                 </Col>
                 <Col span={20} className="main">
                     <Header/>
                     <Row className="content">
-                        <Home></Home>
-                        {/*{this.props.children}*/}
+                        {this.props.children}
                     </Row>
                     <Footer/>
                 </Col>
