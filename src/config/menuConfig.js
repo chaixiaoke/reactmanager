@@ -114,6 +114,9 @@ const menuList = [
             {
                 title:'折线图',
                 key:'/charts/line'
+            },{
+                title:'树图',
+                key:'/charts/tree'
             },
         ]
     },
