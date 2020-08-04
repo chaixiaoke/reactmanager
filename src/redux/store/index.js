@@ -1,8 +1,10 @@
 /*
 * 引入createStore，创建store
 * */
-import {createStore} from "redux";
-import reducer from '../reducer';
-import {composeWithDevTools} from "redux-devtools-extension";
+import { createStore, combineReducers } from "redux";
+import * as reducer from '../reducer';
+import { composeWithDevTools } from "redux-devtools-extension";
 
-export default () => createStore(reducer, composeWithDevTools())
+const reducers = combineReducers(reducer);
+
+export default () => createStore(reducers, composeWithDevTools())

@@ -1,8 +1,8 @@
 import React from 'react'
-import {Menu, Icon} from 'antd';
-import {NavLink} from "react-router-dom";
-import {connect} from "react-redux";
-import {switchMenu} from "../../redux/action";
+import { Menu, Icon } from 'antd';
+import { NavLink } from "react-router-dom";
+import { connect } from "react-redux";
+import { switchMenu } from "../../redux/action";
 import MenuConfig from '../../config/menuConfig'
 import './index.less'
 
@@ -23,12 +23,12 @@ class NavLeft extends React.Component {
         })
     }
 
-    handleClick = ({item, key}) => {
+    handleClick = ({ item, key }) => {
         if (key == this.state.currentKey) {
             return false;
         }
         // 事件派发，自动调用reducer，通过reducer保存到store对象中
-        const {dispatch} = this.props
+        const { dispatch } = this.props
         dispatch(switchMenu(item.props.title))
         this.setState({
             currentKey: key
@@ -57,8 +57,8 @@ class NavLeft extends React.Component {
         return (
             <div>
                 <div className="logo">
-                    <img src="/assets/logo-ant.svg" alt=""/>
-                    <h1>React MS</h1>
+                    <img src="/assets/logo-ant.svg" alt="" />
+                    <h1>{this.props.title}</h1>
                 </div>
                 <Menu
                     onClick={this.handleClick}
@@ -72,4 +72,10 @@ class NavLeft extends React.Component {
     }
 }
 
-export default connect()(NavLeft)
+const mapStateToProps = state => {
+    return {
+        title: state.title
+    }
+}
+
+export default connect(mapStateToProps)(NavLeft)
