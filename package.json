@@ -20,7 +20,7 @@
     "react-app-polyfill": "^0.2.2",
     "react-dev-utils": "^8.0.0",
     "react-dom": "^16.8.6",
-    "react-draft-wysiwyg": "^1.13.2",
+    "react-draft-wysiwyg": "^1.14.6",
     "react-redux": "^7.1.0",
     "react-router-dom": "^5.0.0",
     "redux": "^4.0.1",
