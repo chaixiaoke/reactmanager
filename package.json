@@ -15,7 +15,7 @@
     "echarts": "^4.2.1",
     "echarts-for-react": "^2.0.15-beta.0",
     "jsonp": "^0.2.1",
-    "moment": "^2.24.0",
+    "moment": "^2.29.2",
     "react": "^16.8.6",
     "react-app-polyfill": "^0.2.2",
     "react-dev-utils": "^8.0.0",
